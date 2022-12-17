@@ -47,6 +47,11 @@ class Home extends StatelessWidget {
                   Navigator.pushNamed(context, '/fav');
                 },
                 child: const Text("Favourite")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: const Text("Login")),
           ],
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:schoolmanage/Pages/Counter.dart';
 import 'package:schoolmanage/Pages/Favourite.dart';
 import 'package:schoolmanage/Pages/FavouriteItem.dart';
+import 'package:schoolmanage/Pages/Login.dart';
 
 import 'Home.dart';
 import 'Pages/Slider.dart';
@@ -21,6 +22,8 @@ class MyRouter {
         return MaterialPageRoute(builder: (_) => const Favourite());
       case '/favouriteItem':
         return MaterialPageRoute(builder: (_) => const FavouriteItem());
+      case '/login':
+        return MaterialPageRoute(builder: (_) => Login());
 
       default:
         return MaterialPageRoute(

@@ -7,6 +7,7 @@ import 'package:schoolmanage/Provider/ThemeProvider.dart';
 import 'package:schoolmanage/myRouter.dart';
 
 import 'Home.dart';
+import 'Provider/authProvider.dart';
 
 void main() => runApp(const MyApp());
 
@@ -23,10 +24,12 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create: (_) => SliderProvider()),
           ChangeNotifierProvider(create: (_) => FavouriteProvider()),
           ChangeNotifierProvider(create: (_) => ThemeProvider()),
+          ChangeNotifierProvider(create: (_) => AuthProvider()),
         ],
         child: Builder(builder: (BuildContext context) {
           final themeProvider = Provider.of<ThemeProvider>(context);
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'Provider Demo',
             themeMode: themeProvider.themeMode,
             theme: ThemeData(
